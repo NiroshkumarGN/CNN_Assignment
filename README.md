@@ -1,5 +1,4 @@
-# Project Name
-> Melanoma Ski Cancer Detection
+> #Melanoma Ski Cancer Detection
 
 ## Problem Statement
 To build a CNN based model which can accurately detect melanoma. Melanoma is a type of cancer that can be deadly if not detected early. It accounts for 75% of skin cancer deaths. A solution that can evaluate images and alert dermatologists about the presence of melanoma has the potential to reduce a lot of manual effort needed in diagnosis.
@@ -95,7 +94,8 @@ EarlyStopping: Stops training if the validation accuracy doesn't improve after 5
  - Non-trainable params: 0 (0.00 B)
  - Optimizer params: 7,979,604 (30.44 MB)
 
-![alt text](image-1.png)
+![image](https://github.com/user-attachments/assets/8203e4f6-552f-441d-ba14-8809ffe79ae4)
+
 
  ## Observation 
 - The final model demonstrates balanced performance, with no signs of underfitting or overfitting.
