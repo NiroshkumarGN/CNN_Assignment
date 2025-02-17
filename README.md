@@ -1,4 +1,4 @@
-> #Melanoma Ski Cancer Detection
+#Melanoma Ski Cancer Detection
 
 ## Problem Statement
 To build a CNN based model which can accurately detect melanoma. Melanoma is a type of cancer that can be deadly if not detected early. It accounts for 75% of skin cancer deaths. A solution that can evaluate images and alert dermatologists about the presence of melanoma has the potential to reduce a lot of manual effort needed in diagnosis.
@@ -16,7 +16,8 @@ To build a CNN based model which can accurately detect melanoma. Melanoma is a t
 ## General Information
 - The dataset consists of 2,357 images representing both malignant and benign oncological conditions, sourced from the International Skin Imaging Collaboration (ISIC). These images have been classified according to ISIC's classification system, ensuring that each category is balanced with an equal number of images.
 
-![alt text](image.png)
+![image](https://github.com/user-attachments/assets/768f4237-10c0-440c-8e56-bfdbc727525f)
+
 
 ## Model Architecture
 
@@ -58,41 +59,10 @@ ModelCheckpoint: Saves the model whenever the validation accuracy improves.
 EarlyStopping: Stops training if the validation accuracy doesn't improve after 5 consecutive epochs (patience=5).
 
 
-
 ## Conclusions
 
-┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┓
-┃ Layer (type)                         ┃ Output Shape                ┃         Param # ┃
-┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━┩
-│ sequential_1 (Sequential)            │ (None, 180, 180, 3)         │               0 │
-├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
-│ rescaling_4 (Rescaling)              │ (None, 180, 180, 3)         │               0 │
-├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
-│ conv2d_12 (Conv2D)                   │ (None, 180, 180, 16)        │             448 │
-├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
-│ max_pooling2d_12 (MaxPooling2D)      │ (None, 90, 90, 16)          │               0 │
-├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
-│ conv2d_13 (Conv2D)                   │ (None, 90, 90, 32)          │           4,640 │
-├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
-│ max_pooling2d_13 (MaxPooling2D)      │ (None, 45, 45, 32)          │               0 │
-├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
-│ conv2d_14 (Conv2D)                   │ (None, 45, 45, 64)          │          18,496 │
-├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
-│ max_pooling2d_14 (MaxPooling2D)      │ (None, 22, 22, 64)          │               0 │
-├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
-│ dropout_3 (Dropout)                  │ (None, 22, 22, 64)          │               0 │
-├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
-│ flatten_4 (Flatten)                  │ (None, 30976)               │               0 │
-├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
-│ dense_8 (Dense)                      │ (None, 128)                 │       3,965,056 │
-├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
-│ dense_9 (Dense)                      │ (None, 9)                   │           1,161 │
-└──────────────────────────────────────┴─────────────────────────────┴─────────────────┘
+![image](https://github.com/user-attachments/assets/0649f605-b5be-4f5b-a5e4-33d61afc642d)
 
- - Total params: 11,969,405 (45.66 MB)
- - Trainable params: 3,989,801 (15.22 MB)
- - Non-trainable params: 0 (0.00 B)
- - Optimizer params: 7,979,604 (30.44 MB)
 
 ![image](https://github.com/user-attachments/assets/8203e4f6-552f-441d-ba14-8809ffe79ae4)
 
@@ -116,7 +86,6 @@ EarlyStopping: Stops training if the validation accuracy doesn't improve after 5
 - Pandas
 - Seaborn
 - Tensorflow
-
 
 ## Contact
 Created by Nirosh Kumar GN 
